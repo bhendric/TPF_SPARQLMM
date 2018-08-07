@@ -1,4 +1,4 @@
-executing# TPF with SPARQL-MM compatibility
+# TPF with SPARQL-MM compatibility
 This repo contains a proof-of-concept implementation for enabling the TPF client with SPARQL-MM functionality. This is an addition to the existing Triple Pattern Fragments Client. The altered client can resolve SPARQL-MM queries without having to alter them.
 
 The SPARQL-MM enabled client has an added optional flags that can be passed when executing the client. When the `-o` flag is passed, the client will use the Media Fragments URI standard to optimise the query execution and perform query rewriting before execution. This way, the performance of the TPF client is improved. If the flag is not passed, the SPARQL-MM query will be solved without using the optimisations.
