@@ -1,9 +1,9 @@
 # TPF with SPARQL-MM compatibility
-This repo contains a proof-of-concept implementation for enabling the TPF client with SPARQL-MM functionality. This is an addition to the existing Triple Pattern Fragments Client. The altered client can resolve SPARQL-MM queries without having to alter them.
+This repo contains a proof-of-concept implementation for enabling the TPF client with SPARQL-MM functionality. This is an addition to the existing [Triple Pattern Fragments Client](https://github.com/LinkedDataFragments/Client.js). The altered client can resolve SPARQL-MM queries without having to alter them.
 
 The SPARQL-MM enabled client has an added optional flags that can be passed when executing the client. When the `-o` flag is passed, the client will use the Media Fragments URI standard to optimise the query execution and perform query rewriting before execution. This way, the performance of the TPF client is improved. If the flag is not passed, the SPARQL-MM query will be solved without using the optimisations.
 
-The server implementation of TPF needs no alteration to provide SPARQL-MM support. One requirement however is how the media data is defined in the RDF document as SPARQL-MM makes use of the Media Fragments URI standard. An example of how media and media fragments need to be defined can be found in the following example:
+The [server implementation](https://github.com/LinkedDataFragments/Server.js) of TPF needs no alteration to provide SPARQL-MM support. One requirement however is how the media data is defined in the RDF document as SPARQL-MM makes use of the Media Fragments URI standard. An example of how media and media fragments need to be defined can be found in the following example:
 
 ```
 @prefix ns1: <http://purl.org/dc/elements/1.1/> .
